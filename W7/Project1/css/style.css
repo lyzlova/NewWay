@@ -1,0 +1,151 @@
+:root {
+  --bcg-body: #ffffff;
+  --bcg-iconboxes: #f7f7f7;
+  --accent-color: #0ec8cb;
+  --title-iconboxes-color: #1b1b1b;
+  --text-iconboxes-color: #777777;
+  --title-main-color: #898f99;
+  --text-main-color: #999999;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bcg-body-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about {
+  padding-top: 142px;
+  padding-bottom: 138px;
+}
+
+.about__title {
+  text-align: center;
+  margin-bottom: 36px;
+  color: var(--title-main-color);
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 2.5;
+  font-weight: 700;
+}
+
+.accent {
+  color: var(--accent-color);
+  font-size: 48px;
+  line-height: 2.5;
+  font-weight: 400;
+}
+
+.about__text {
+  margin-bottom: 107px;
+  text-align: center;
+  color: var(--text-main-color);
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.66;
+  font-weight: 400;
+  font-family: "PT Sans", sans-serif;
+}
+
+.iconboxes__list {
+  width: 960px;
+  margin: 0 auto;
+  font-size: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.iconboxes__item {
+  display: inline-block;
+  width: calc(100% / 4);
+  padding-top: 56px;
+  padding-bottom: 83px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.iconboxes__title {
+  margin-bottom: 36px;
+  color: var(--title-iconboxes-color);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.iconboxes__descr {
+  color: var(--text-iconboxes-color);
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 400;
+  font-family: "PT Sans", sans-serif;
+}
+
+.icon {
+  margin: 0 auto;
+  margin-bottom: 63px;
+  fill: var(--bcg-main-color);
+  display: block;
+}
+
+.iconboxes__item:hover {
+  background-color: var(--accent-color);
+}
+
+.iconboxes__item:hover .icon {
+  fill: var(--bcg-body);
+}
+
+.iconboxes__item:hover .iconboxes__descr,
+.iconboxes__item:hover .iconboxes__title {
+  background-color: var(--accent-color);
+  color: var(--bcg-body);
+}

@@ -1,0 +1,186 @@
+:root {
+  --bcg-body-color: #282728;
+  --section-border-color: #2b81ac;
+  --bcg-main-color: #3399cc;
+  --bcg-san-francisco-color: #cc6699;
+  --bcg-paris-color: #33cccc;
+  --bcg-belgrade-color: #996699;
+  --bcg-moscow-color:#c24747;
+  --bcg-tel-aviv-color:#e2674a;
+  --bcg-cair-color:#ffcc66;
+  --bcg-new-york-color: #99cc99;
+  --bcg-new-delhi-color: #669999;
+  --bcg-tokyo-color: #339966;
+  --bcg-sydney-color: #666699;
+  --text-color: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text-color);
+  background-color: var(--bcg-body-color);
+  font-family: 'Lucida Sans Unicode', arial;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+.container {
+  max-width: 986px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  max-width: 1467px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: var(--bcg-main-color);
+  border: 22px solid var(--section-border-color);
+}
+
+.country__title {
+  margin-bottom: 40px;
+}
+
+.country__list {
+  position: relative;
+  max-width: 986px;
+  margin: 0 auto;
+  margin-bottom: 34px;
+  border: 3px solid var(--text-color);
+  background-color: var(--text-color);
+  list-style: none;
+  text-align: center;
+  font-size: 0;
+}
+
+.country__list h2 {
+  margin-bottom: 20px;
+}
+
+.country__list p, .wi {
+  display: inline-block;
+  font-size: 20px;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+.country__list li {
+  display: inline-block;
+  border: 3px solid var(--text-color);
+  padding-top: 34px;
+  padding-bottom: 22px;
+  font-size: 16px;
+}
+
+.country__list + p {
+  font-size: 22px;
+  color: var(--text-color);
+}
+
+/* items bcg color */
+
+.country__list li:nth-child(1) {
+  width: 50%;
+  background-color: var(--bcg-main-color);
+}
+
+.country__list li:nth-child(2) {
+  width: 25%;
+  background-color: var(--bcg-san-francisco-color);
+}
+
+.country__list li:nth-child(3) {
+  width: 25%;
+  background-color: var(--bcg-paris-color);
+}
+
+.country__list li:nth-child(4) {
+  width: 25%;
+  background-color: var(--bcg-belgrade-color);
+}
+
+.country__list li:nth-child(5) {
+  width: 25%;
+  background-color: var(--bcg-moscow-color);
+}
+
+.country__list li:nth-child(6) {
+  width: 25%;
+  background-color: var(--bcg-tel-aviv-color);
+}
+
+.country__list li:nth-child(7) {
+  width: 25%;
+  background-color: var(--bcg-cair-color);
+}
+
+.country__list li:nth-child(8) {
+  width: 25%;
+  background-color: var(--bcg-new-york-color);
+}
+
+.country__list li:nth-child(9) {
+  width: 50%;
+  background-color: var(--bcg-new-delhi-color);
+}
+
+.country__list li:nth-child(10) {
+  width: 25%;
+  background-color: var(--bcg-tokyo-color);
+}
+
+.country__list li:nth-child(11) {
+  width: 100%;
+  background-color: var(--bcg-sydney-color);
+}
+
+/* hover */
+
+.country__list:hover li{
+  opacity: 0.5;
+  transition: all .1s ease-in
+}
+
+.country__list li:hover{
+  opacity: 1;
+  transition: all .1s ease-in
+}
+
