@@ -1,0 +1,145 @@
+@font-face {
+  font-family: HansKendrick-Regular;
+  src: url("../fonts/HansKendrick-Regular/HansKendrick-Regular.otf")
+    format("opentype");
+}
+
+:root {
+  --bcg-wrap-color: #e2e7ec;
+  --bcg-item-color: #ffffff;
+  --date-text-color: #818181;
+  --descr-text-color: #1d1d1d;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--bcg-wrap-color);
+  font-family: "HansKendrick-Regular";
+}
+
+h1,
+h2,
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 90px 10px 100px;
+  margin: 0 auto;
+}
+
+/* card */
+
+.card__list {
+  max-width: 1120px;
+  margin-bottom: 76px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.card__item {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 32.1428%;
+  background-color: var(--bcg-item-color);
+}
+
+.card__item:first-child {
+  width: 66.0715%;
+}
+
+.card__item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 20px;
+}
+
+.card__descr {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 30px 28px 25px;
+}
+
+.card__descr .date {
+  margin-bottom: 22px;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--date-text-color);
+}
+
+.card__descr > .descr {
+  margin-bottom: 70px;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.36;
+  color: var(--descr-text-color);
+}
+
+.card__descr .descr-card-shadow {
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.card-shadow {
+  position: absolute;
+  justify-content: flex-end;
+  height: 100%;
+  width: 740px;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(29, 29, 29, 0),
+    rgba(29, 29, 29, 1)
+  );
+}
+
+.card-shadow .descr {
+  margin-bottom: 0;
+  color: var(--bcg-item-color);
+}
+
+/* loader */
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader .icon {
+  margin-right: 14px;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.loader p {
+  text-transform: uppercase;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

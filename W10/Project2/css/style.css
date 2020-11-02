@@ -1,0 +1,164 @@
+:root {
+  --bcg-item-color: #dddddd;
+  --bcg-body-color: #f6f6f6;
+  --text-color: #3c3c3c;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--bcg-body-color);
+  color: var(--text-color);
+  font-family: "Lato", sans-serif;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+ul,
+ol,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* card  */
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 106px 15px 90px;
+}
+
+.card__title {
+  position: relative;
+  margin-bottom: 60px;
+  font-size: 34px;
+  letter-spacing: 3.52px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card__title::after {
+  content: "";
+  position: absolute;
+  border-color: var(--bcg-item-color);
+  border-style: solid;
+  top: 176%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-width: 0 45px 3px 0;
+}
+
+.card__text {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* user */
+
+.user__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.user__item {
+  width: 270px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+
+.user__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.user__img {
+  margin-bottom: 20px;
+  background-color: var(--bcg-item-color);
+}
+
+/* social-ison__list */
+.social-icon__list {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  list-style: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-icon__item:not(:last-child) {
+  margin-right: 4px;
+}
+
+.social-icon__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  width: 42px;
+}
+
+.social-icon__item:hover {
+  background-color: #5ecbe7;
+}
+
+.social-icon__list {
+  display: none;
+}
+
+/* hover */
+
+.user__item:hover > .social-icon {
+  position: absolute;
+  background-color: rgb(0, 174, 217);
+  opacity: 0.902;
+  top: 0;
+  width: 270px;
+  height: 270px;
+}
+
+.user__item:hover .social-icon__list {
+  display: flex;
+}
+
+.user-name {
+  margin-bottom: 8px;
+}

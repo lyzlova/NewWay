@@ -1,0 +1,174 @@
+:root {
+  --bcg-main-color: #fdde7e;
+  --bcg-card-color: #ffffff;
+  --price-color: #02995b;
+  --text-main-color: #333333;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "Miso Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Miso Bold"),
+    url("../fonts/miso-cufonfonts-webfont/miso-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Miso Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Miso Light"),
+    url("../fonts/miso-cufonfonts-webfont/miso-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Myriad Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Myriad Pro Regular"),
+    url("../fonts/myriad-pro-cufonfonts-webfont/MYRIADPRO-REGULAR.woff")
+      format("woff");
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--text-main-color);
+}
+
+h1,
+h2,
+ul,
+ol,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 130px;
+}
+
+/* card  */
+.card {
+  padding: 80px 30px;
+  background-color: var(--bcg-main-color);
+}
+
+.card__list {
+  max-width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.card__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 30%;
+  padding: 50px 93px 60px;
+  text-align: center;
+  background-color: var(--bcg-card-color);
+}
+
+.card__item:nth-child(2) {
+  order: 1;
+}
+
+.card__item:hover {
+  transform: scale(1.07);
+  z-index: 1;
+  transition: transform 0.1s;
+}
+
+.card-price {
+  margin-bottom: 80px;
+  color: var(--price-color);
+  font-size: 70px;
+  font-weight: 700;
+  font-family: "Miso Bold";
+}
+
+.card__icon {
+  position: relative;
+  height: 77px;
+  width: 135px;
+  margin-left: 18px;
+  margin-bottom: 36px;
+}
+
+/* bean icon*/
+.card__icon:after {
+  content: "";
+  height: 46px;
+  width: 50px;
+  position: absolute;
+  left: 44%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  background: url("../icon/bean.png") no-repeat center;
+}
+
+/* smoke icon */
+.smoke-bronze:before,
+.smoke-silver:before,
+.smoke-gold:before {
+  content: "";
+  height: 46px;
+  width: 50px;
+  position: absolute;
+  left: 45%;
+  top: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.smoke-bronze:before {
+  background: url("../icon/smoke-bronze.png") no-repeat center;
+}
+
+.smoke-silver:before {
+  background: url("../icon/smoke-silver.png") no-repeat center;
+}
+
+.smoke-gold:before {
+  background: url("../icon/smoke-silver.png") no-repeat center;
+}
+
+/*  text*/
+.card__item p {
+  color: var(--text-main-color);
+  font-family: "Myriad Pro Regular";
+  font-size: 18px;
+}
+
+.accent {
+  display: block;
+  margin-bottom: 32px;
+  font-family: "Miso Light";
+  letter-spacing: 3px;
+  font-size: 40px;
+}
