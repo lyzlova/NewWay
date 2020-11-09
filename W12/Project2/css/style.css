@@ -1,0 +1,242 @@
+:root {
+  --text-color: #ffffff;
+  --main-text-color: #262626;
+  --contact-input-color: rgba(0, 196, 196, 0.502);
+  --input-active-color: rgb(53, 91, 130);
+  --input-contact-bcg-color: #00c4c4;
+  --footer-text-color: rgb(185, 185, 185);
+  --footer-accent: #c92a4a;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+h1,
+h2,
+ul,
+ol,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+.vissualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* cestion contact */
+.contact--bcg {
+  background-image: url(../img/footer-bcg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact {
+  padding: 100px 0 120px;
+}
+
+.contact__title {
+  margin-bottom: 46px;
+  font-size: 90px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--main-text-color);
+}
+
+.contact__text {
+  max-width: 350px;
+  margin: 0 auto;
+  margin-bottom: 46px;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.47;
+  text-align: center;
+  color: var(--main-text-color);
+}
+
+.contact-group {
+  display: flex;
+}
+
+.form-contact {
+  width: 500px;
+  margin-right: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.form-contact__field {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-contact__input {
+  width: 100%;
+  padding: 24px;
+  border: 1px solid var(--contact-input-color);
+  background-color: var(--contact-input-color);
+}
+
+.form-contact__label {
+  position: absolute;
+  padding: 6px;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.667;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.form-contact__input:active,
+.form-contact__input:focus {
+  border-left: 6px solid var(--input-active-color);
+  outline: none;
+  background-color: var(--input-contact-bcg-color);
+}
+
+.form-contact__input:focus + .form-contact__label,
+.form-contact__input:not(:placeholder-shown) + .form-contact__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  padding: 24px;
+  border: 1px solid var(--contact-input-color);
+  background-color: var(--contact-input-color);
+}
+
+textarea::placeholder {
+  font-family: "Raleway";
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.667;
+  text-align: left;
+  color: var(--text-color);
+}
+
+textarea:active,
+textarea:focus {
+  border-left: 6px solid var(--input-active-color);
+  outline: none;
+  background-color: var(--input-contact-bcg-color);
+}
+
+.contact-address__address,
+.contact-address__email,
+.contact-address__phone {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.471;
+  text-align: left;
+  color: var(--main-text-color);
+}
+
+.contact-address__link {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.contact-address > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* footer */
+
+.footer--bcg {
+  background-color: var(--main-text-color);
+}
+
+.footer {
+  padding: 40px 0 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  width: 127px;
+  height: 52px;
+  order: 0;
+}
+
+.footer__small {
+  order: -1;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.563;
+  color: var(--footer-text-color);
+}
+
+.footer__text {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.667;
+  color: var(--footer-text-color);
+}
+
+.accent {
+  color: var(--footer-accent);
+}

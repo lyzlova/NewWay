@@ -1,0 +1,215 @@
+:root {
+  --text-color: #ffffff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+h1,
+h2,
+ul,
+ol,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+.vissualy-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+#subscribe {
+  display: none;
+}
+
+/* on-active */
+.action {
+  padding-bottom: 6px;
+}
+
+.on-active {
+  color: #ffffff;
+  box-shadow: inset 0px -2px 0px rgb(230, 106, 100);
+}
+
+.bcg-img {
+  width: 400px;
+  background-image: url(../img/bcg-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+
+.gradient {
+  opacity: 0.7;
+  background-image: -moz-linear-gradient(
+    58deg,
+    rgb(48, 35, 174) 0%,
+    rgb(124, 72, 195) 53%,
+    rgb(200, 109, 215) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    58deg,
+    rgb(48, 35, 174) 0%,
+    rgb(124, 72, 195) 53%,
+    rgb(200, 109, 215) 100%
+  );
+  background-image: -ms-linear-gradient(
+    58deg,
+    rgb(48, 35, 174) 0%,
+    rgb(124, 72, 195) 53%,
+    rgb(200, 109, 215) 100%
+  );
+}
+
+.container {
+  padding: 50px 70px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+  color: #e1c2f1;
+}
+
+.logIn__action {
+  margin-right: 20px;
+}
+
+/* form */
+.sign-in__form {
+  margin-bottom: 30px;
+}
+
+.sign-in__field {
+  position: relative;
+}
+
+.sign-in__label {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.username__label {
+  margin-bottom: 40px;
+}
+
+.userpassword__label {
+  margin-bottom: 22px;
+}
+
+.keeplogin__label {
+  position: relative;
+  margin-bottom: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.sign-in-keeplogin__label {
+  margin-left: 10px;
+}
+
+.sign-in__input:checked + .icon {
+  padding: 5px;
+  border-color: transparent;
+  background-color: rgb(35, 174, 146);
+  background-size: contain;
+  background-origin: border-box;
+  background-image: url("../icon/check-mark.svg");
+}
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: inherit;
+  border: 2px solid rgb(191, 185, 204);
+}
+
+/* btn */
+
+.btn {
+  padding: 15px;
+  background-color: rgb(35, 174, 146);
+  border: 1px solid rgb(35, 174, 146);
+  color: var(--text-color);
+  width: 100%;
+}
+
+.btn:hover,
+.btn:focus {
+  cursor: pointer;
+  outline: 2px solid rgb(35, 174, 146);
+  box-shadow: 0 0 0 4px rgb(35, 174, 146);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* action craete */
+.actions-create {
+  display: flex;
+  font-size: 13px;
+}
+
+.actions-create .forgot__action {
+  margin-right: 30px;
+}
+
+/* hover */
+.logIn__action:hover,
+.signIn__action:hover,
+.forgot__action:hover,
+.create__action:hover {
+  box-shadow: inset 0px -2px 0px rgb(230, 106, 100);
+  color: #ffffff;
+}

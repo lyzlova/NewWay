@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="bcg-img">
+        <div class="gradient">
+          <div class="container">
+            <div class="actions">
+              <a class="action logIn__action on-active" id="tosubscribe"
+                >Log in</a
+              >
+              <a class="action signIn__action" id="tologin">Sign in</a>
+            </div>
+
+            <form id="login" class="sign-in__form" action="#" autocomplete="on">
+              <label class="sign-in__field username__label">
+                <input
+                  class="sign-in__input"
+                  type="text"
+                  name="username"
+                  required="required"
+                  placeholder="  "
+                />
+                <span class="sign-in__label">Username</span>
+              </label>
+              <label class="sign-in__field userpassword__label">
+                <input
+                  class="sign-in__input"
+                  type="password"
+                  name="password"
+                  required="required"
+                  placeholder="  "
+                />
+                <span class="sign-in__label">Password</span>
+              </label>
+              <label class="keeplogin__label">
+                <input
+                  class="sign-in__input vissualy-hidden"
+                  type="checkbox"
+                  name="loginkeeping"
+                  required="required"
+                />
+                <span class="icon"> </span>
+                <span class="sign-in-keeplogin__label">Keep me logged in</span>
+              </label>
+              <p class="login button">
+                <input class="btn" type="submit" value="Sign in" />
+              </p>
+            </form>
+
+            <div id="subscribe" class="animate-form">
+              <form action="#" autocomplete="on">
+                <label class="subscribe__field username__label">
+                  <input
+                    class="subscribe__input"
+                    type="text"
+                    name="username"
+                    required="required"
+                    placeholder="  "
+                  />
+                  <span class="subscribe__label">Username</span>
+                </label>
+                <label class="subscribe__field usermail__label">
+                  <input
+                    class="sign-in__input"
+                    type="email"
+                    name="email"
+                    required="required"
+                    placeholder="  "
+                  />
+                  <span class="sign-in__label">Your email</span>
+                </label>
+
+                <label class="subscribe__field userpassword__label">
+                  <input
+                    class="subscribe__input"
+                    type="password"
+                    name="password"
+                    required="required"
+                    placeholder="  "
+                  />
+                  <span class="subscribe__label">Password</span>
+                </label>
+                <label class="subscribe__field userpassword__label">
+                  <input
+                    class="subscribe__input"
+                    type="password"
+                    name="password"
+                    required="required"
+                    placeholder="  "
+                  />
+                  <span class="subscribe__label"
+                    >Please confirm your password</span
+                  >
+                </label>
+                <p class="signin button">
+                  <input type="submit" value="Subscribe" />
+                </p>
+              </form>
+            </div>
+
+            <div class="actions-create">
+              <a class="action forgot__action" id="toforgot">Forgot password</a>
+              <a class="action create__action" id="tocreate"
+                >Create an account</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
