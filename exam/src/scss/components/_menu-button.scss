@@ -1,0 +1,113 @@
+.site-nav {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 100px;
+  @include flex(flex, row, nowrap, center, space-between);
+
+  @media screen and (min-width: 1140px) {
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    @include font(24px, $main-text-color, 700, 1, center);
+  }
+
+  &__list {
+    @extend %list;
+
+    @media screen and (min-width: 768px) {
+      @include flex(flex, row, nowrap, center, space-between);
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    &:hover {
+      text-shadow: 1px 1px 2px $footer-bcg-color;
+    }
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    @media screen and (min-width: 1140px) {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    @include font(14px, $main-text-color, 400, 1.86, center);
+  }
+
+  &__label {
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+
+    &__list {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &__toggle-btn {
+      @media screen and (max-width: 768px) {
+        display: flex;
+      }
+    }
+  }
+
+  #navmenu {
+    display: none;
+  }
+}
+
+.nav-menu {
+  .site-nav__toggle-btn {
+    display: none;
+    padding: 1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $header-bcg-color;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-nav {
+    &__menu:checked ~ &__list {
+      display: flex;
+      flex-flow: column nowrap;
+      padding: 30px;
+      position: absolute;
+      top: 100%;
+      background-color: $header-bcg-color;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .site-nav {
+    position: initial;
+    &__menu:checked ~ &__list {
+      position: fixed;
+      display: flex;
+      top: 57%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 5px 5px 5px 5px $testimonail-group-bcg-color;
+      max-width: 100%;
+    }
+  }
+}

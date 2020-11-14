@@ -1,0 +1,80 @@
+.how-it-works {
+  padding: 100px 0 120px;
+  background-color: $testimonail-group-bcg-color;
+}
+
+.search {
+  &__list {
+    position: relative;
+    @include flex(flex, row, nowrap, center, space-between);
+    &::before {
+      position: absolute;
+      display: block;
+      top: -12%;
+      left: 48%;
+      transform: translate(-50%, -50%);
+      content: "";
+      height: 40px;
+      width: 234px;
+      background-image: url(../img/Shape61.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      @media screen and (min-width: 768px) {
+        width: 500px;
+        height: 60px;
+        top: -25%;
+        left: 51%;
+      }
+
+      @media screen and (min-width: 1140px) {
+        width: 920px;
+        height: 86px;
+        top: -44%;
+        left: 62%;
+      }
+    }
+    @extend %list;
+
+    @media screen and (min-width: 768px) {
+      width: 600px;
+    }
+
+    @media screen and (min-width: 1140px) {
+      width: 940px;
+    }
+  }
+
+  &__item {
+    @include flex(flex, column, nowrap, center, center);
+    width: 80px;
+    z-index: 0;
+    border-radius: 50%;
+    background-color: $testimonail-group-bcg-color;
+    @media screen and (min-width: 768px) {
+      width: 216px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+    @media screen and (min-width: 768px) {
+      margin-right: 100px;
+    }
+  }
+
+  &__icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    @include font(16px, $main-text-color, 400, 1, center);
+    @media screen and (min-width: 768px) {
+      @include font(26px, $main-text-color, 400, 1, center);
+    }
+    @media screen and (min-width: 1140px) {
+      @include font(36px, $main-text-color, 400, 1, center);
+    }
+  }
+}

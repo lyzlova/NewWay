@@ -1,0 +1,91 @@
+.why-choose-us--bcg {
+  padding: 120px 0px 120px;
+  @include flex(flex, column, false, false, center);
+  @include background(no-repeat, center, cover);
+  background-image: url("../img/why-bcg.png");
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url("../img/why-bcg@2x.png");
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url("../img/why-bcg@3x.png");
+  }
+}
+
+.why-choose-us__content {
+  @include flex(flex, column, false, false, center);
+
+  @media screen and (min-width: 768px) {
+    @include flex(flex, row, false, false, center);
+  }
+}
+
+.choose-group {
+  @include flex(flex, column, false, start, false);
+  &:nth-child(1) {
+    margin-bottom: 50px;
+  }
+  &__title {
+    margin-bottom: 66px;
+    @include font(36px, $main-text-color, 400, 1.625, left);
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-family: "Josefin Sans", sans-serif;
+    @include font(16px, $why-text-color, 400, 1.625, left);
+  }
+
+  &__button {
+    padding: 17px 40px;
+    @extend %btn;
+    @include btn(
+      0px,
+      solid,
+      $header-bcg-color,
+      $header-bcg-color,
+      $main-text-color
+    );
+    font-family: "Aleo", serif;
+    @include font(14px, $main-text-color, 400, 1.623, center);
+
+    &:hover,
+    &:focus {
+      @extend %active;
+    }
+  }
+
+  &__img {
+    width: 200px;
+    @media screen and (min-width: 768px) {
+      width: 260px;
+    }
+    @media screen and (min-width: 1140px) {
+      width: 350px;
+    }
+  }
+
+  &__img:nth-child(n) {
+    margin-bottom: 6px;
+  }
+
+  &__img:nth-child(2n) {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .choose-group {
+    width: 50%;
+
+    &:nth-child(2n) {
+      align-items: center;
+      margin-left: auto;
+    }
+  }
+}

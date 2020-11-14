@@ -1,0 +1,81 @@
+.testimonial--bcg {
+  @include flex(flex, column, false, false, center);
+  @include background(no-repeat, center, cover);
+  background-image: url("../img/testimonial.png");
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url("../img/testimonial@2x.png");
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url("../img/testimonial@3x.png");
+  }
+}
+
+.testimonial {
+  padding: 120px 30px 200px;
+  @include flex(flex, column, false, false, center);
+
+  &__title {
+    margin-bottom: 100px;
+    @include font(36px, $main-text-color, 400, 1, center);
+  }
+}
+
+.testimonial-group {
+  background-color: $testimonail-group-bcg-color;
+
+  @media screen and (min-width: 1140px) {
+    width: 1110px;
+    @include flex(flex, row, nowrap, center, center);
+  }
+
+  &__img {
+    margin-bottom: 50px;
+    width: 40%;
+
+    @media screen and (min-width: 1140px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    margin-bottom: 32px;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    @include font(20px, $appartment-text-color, 400, 1.3, left);
+  }
+
+  &__text {
+    position: relative;
+    text-indent: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    @include font(16px, $why-text-color, 400, 1.625, left);
+
+    &::before {
+      content: "";
+      display: inline-flex;
+      position: absolute;
+      height: 20px;
+      width: 20px;
+      left: 1.5%;
+      top: -3%;
+      transform: translate(-50%, -50%);
+      background-size: cover;
+      background-image: url("../img/quote.svg");
+    }
+  }
+
+  & > div {
+    @media screen and (max-width: 1139px) {
+      padding: 30px;
+    }
+    @media screen and (min-width: 1140px) {
+      padding: 36px 70px 36px 50px;
+    }
+  }
+}

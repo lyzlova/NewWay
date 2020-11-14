@@ -1,0 +1,135 @@
+.header--bcg {
+  padding: 0px 0px 150px;
+  @include flex(flex, column, false, false, center);
+  @include background(no-repeat, center, cover);
+  background-image: url("../img/header-bcg.png");
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url("../img/header-bcg@2x.png");
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url("../img/header-bcg@3x.png");
+  }
+
+  @media screen and (min-width: 1140px) {
+    padding: 0;
+  }
+}
+
+.site-nav--bcg {
+  @media screen and (min-width: 1140px) {
+    background-color: $header-bcg-color;
+    order: 0;
+  }
+}
+
+.search {
+  @include flex(flex, column, wrap, center, center);
+  @media screen and (min-width: 1140px) {
+    padding: 264px 0px 290px;
+    order: -1;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    @include font(48px, $main-text-color, 700, 1, center);
+  }
+
+  &__subtitle {
+    margin-bottom: 54px;
+    @include font(22px, $main-text-color, 400, 1.18, center);
+  }
+
+  .search-group {
+    width: 170px;
+    padding: 12px;
+    display: flex;
+    background-color: $header-bcg-color;
+    @media screen and (min-width: 768px) {
+      padding: 12px 20px;
+    }
+  }
+}
+
+.search-form {
+  @include flex(flex, row, nowrap, false, center);
+  height: 60px;
+  border: 2px solid $main-text-color;
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
+
+  @media screen and (min-width: 1140px) {
+    width: 650px;
+  }
+
+  &__field {
+    position: relative;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid $main-text-color;
+    background-color: $main-text-color;
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    letter-spacing: 1px;
+    transform: translateY(-50%);
+    @include font(14px, $input-text-color, 400, 1.86, center);
+    @media screen and (min-width: 768px) {
+      letter-spacing: 4.4px;
+      left: 15%;
+    }
+  }
+
+  &__input:active,
+  &__input:focus {
+    border-left: 6px solid $main-text-color;
+    outline: none;
+    background-color: $main-text-color;
+  }
+
+  &__button {
+    margin-right: 8px;
+    @extend %btn;
+    @include btn(
+      0px,
+      solid,
+      $header-bcg-color,
+      $header-bcg-color,
+      $main-text-color
+    );
+    font-family: "Aleo", serif;
+    @include font(14px, $main-text-color, 400, 1.623, center);
+
+    &:hover,
+    &:focus {
+      @extend %active;
+    }
+  }
+}
+
+.search-form__input:focus + .search-form__label,
+.search-form__input:not(:placeholder-shown) + .search-form__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

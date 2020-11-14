@@ -1,0 +1,36 @@
+.footer--bcg {
+  padding: 120px 30px 50px;
+  background-color: $footer-bcg-color;
+}
+
+.footer {
+  @include flex(flex, column, nowrap, center, space-between);
+  font-family: "Josefin Sans", sans-serif;
+
+  &__logo {
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include font(24px, $main-text-color, 700, 1.08, center);
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    @include font(16px, $main-text-color, 400, 1.625, center);
+  }
+}
+
+.icon-group {
+  &__list {
+    @extend %list;
+    @include flex(flex, row, nowrap, center, center);
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  & > icon {
+      fill: red;
+  }
+}
