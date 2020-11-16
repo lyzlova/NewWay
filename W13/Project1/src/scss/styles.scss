@@ -1,0 +1,17 @@
+@import "./base/breakpoints";
+@import "./utils/placeholder";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/vissualy-hidden";
+@import "./base/container";
+@import "./components/title";
+@import "./components/frame";
+
+@import "./components/header";
+@import "./components/about";
+@import "./components/services";
+@import "./components/whatwedo";
+@import "./components/gallery";
+@import "./components/contact";
+@import "./components/footer";
+@import "./base/main.scss";

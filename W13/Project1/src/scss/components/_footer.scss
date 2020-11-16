@@ -1,0 +1,17 @@
+.footer {
+  padding: 63px 0 63px;
+  @include flex(flex, row, false, center, center);
+
+
+  .logo {
+    margin-right: 20px;
+    height: 37px;
+    width: 37px;
+  }
+
+  &__small {
+    @include font(14px, $main-text-color, 400, 1.2, false);
+  }
+
+}
+

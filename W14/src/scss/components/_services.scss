@@ -1,0 +1,49 @@
+.services--bcg {
+  background-color: $box-services-bcg-color;
+}
+
+.services {
+  padding: 176px 0 148px;
+  @include flex(flex, row, false, center, space-between);
+  @include background(no-repeat, right, false);
+  background-image: url(../img/tomato.png);
+
+  &__title {
+    @include font(90px, $secondary-color, 700, false, false);
+    order: 1;
+  }
+}
+
+.services-group {
+  width: 400px;
+  &__list {
+    @extend %list;
+  }
+
+  &__item {
+    padding-left: 26px;
+    max-height: 100px;
+    @include flex(flex, row, wrap, center, space-between);
+    background-color: $secondary-color;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    padding: 26px;
+    border-left: 1px solid rgb(157, 157, 157);
+    @include font(20px, $main-text-color, 300, 1.35, false);
+  }
+
+  &__img {
+    width: 47px;
+    height: 47px;
+  }
+
+  &__caption {
+    max-width: 300px;
+  }
+}
+

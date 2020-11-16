@@ -1,0 +1,23 @@
+.title {
+  margin-bottom: 44px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  @include font(34px, $main-text-color, 700, false, false);
+}
+
+.text {
+  @include font(16px, $main-text-color, 400, 1.93, false);
+}
+
+.scope__title {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  @include font(20px, $main-text-color, 700, false, center);
+}
+
+.scope__text {
+  @include font(14px, $main-text-color, 300, 1.85, center);
+}

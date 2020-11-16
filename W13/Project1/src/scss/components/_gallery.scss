@@ -1,0 +1,92 @@
+.gallery {
+  position: relative;
+  height: 163px;
+  background: url(../img/Layer2.jpg) left top no-repeat,
+    url(../img/Layer1.jpg) center top no-repeat,
+    url(../img/Layer3.jpg) right top no-repeat,
+    url(../img/Layer5.jpg) left bottom no-repeat,
+    url(../img/Layer6.jpg) center bottom no-repeat,
+    url(../img/Layer4.jpg) right bottom no-repeat;
+  background-size: 28.43% 80px, 41.66% 80px, 28.43% 80px, 28.43% 80px,
+    41.66% 80px, 28.43% 80px;
+  @media screen and (min-width: 768px) {
+    height: 267px;
+    background-size: 28.43% 130px, 41.66% 130px, 28.43% 130px, 28.43% 130px,
+      41.66% 130px, 28.43% 130px;
+  }
+
+  &__text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    @include font(16px, $secondary-color, 700, false, center);
+    &:nth-child(1) {
+      left: 13%;
+      bottom: 48%;
+    }
+    &:nth-child(2) {
+      left: 37%;
+      bottom: 48%;
+    }
+    &:nth-child(3) {
+      left: 82%;
+      bottom: 48%;
+    }
+    &:nth-child(4) {
+      left: 12%;
+      bottom: 0;
+    }
+    &:nth-child(5) {
+      left: 37%;
+      bottom: 0;
+    }
+    &:nth-child(6) {
+      left: 79%;
+      bottom: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+      @include font(22px, $secondary-color, 700, false, center);
+      &:nth-child(1) {
+        left: 10%;
+      }
+      &:nth-child(2) {
+        left: 35%;
+      }
+      &:nth-child(3) {
+        left: 80%;
+      }
+      &:nth-child(4) {
+        left: 10%;
+      }
+      &:nth-child(5) {
+        left: 35%;
+      }
+      &:nth-child(6) {
+        left: 77%;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      @include font(34px, $secondary-color, 700, false, center);
+      &:nth-child(1) {
+        left: 11%;
+      }
+      &:nth-child(2) {
+        left: 36%;
+      }
+      &:nth-child(3) {
+        left: 81%;
+      }
+      &:nth-child(4) {
+        left: 10%;
+      }
+      &:nth-child(5) {
+        left: 36%;
+      }
+      &:nth-child(6) {
+        left: 78%;
+      }
+    }
+  }
+}

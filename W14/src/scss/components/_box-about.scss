@@ -1,0 +1,27 @@
+.box-about--bcg {
+    background-color: $box-about-bcg-color;
+  }
+
+.box-about {
+  padding: 180px 0 230px;
+  background-image: url(../img/img.png);
+  @include background(no-repeat, left, false);
+  
+  &__content {
+    @include flex(flex, column, false, false, false);
+    margin-left: auto;
+    max-width: 500px;
+  }
+  &__title {
+    margin-bottom: 16px;
+    @include font(90px, $secondary-color, 700, false, false);
+  }
+
+  &__text {
+    @include font(17px, $secondary-color, 300, 1.6, false);
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

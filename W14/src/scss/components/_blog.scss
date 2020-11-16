@@ -1,0 +1,85 @@
+.blog--bcg {
+  background-color: $blog-bcg-color;
+}
+
+.blog {
+  padding: 140px 0 166px;
+  @include flex(flex, column, false, center, false);
+
+  &__title {
+    margin-bottom: 26px;
+    @include font(90px, $secondary-color, 700, 1.6, center);
+  }
+
+  &__text {
+    max-width: 570px;
+    margin: 0 auto;
+    margin-bottom: 46px;
+    @include font(17px, $secondary-color, 300, 1.47, center);
+  }
+}
+
+.blog {
+  &__list {
+    min-width: 370px;
+    max-width: 1170px;
+    margin-bottom: 50px;
+    @include flex(flex, false, wrap, center, space-between);
+    @extend %list;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    width: 370px;
+    height: 310px;
+    background-color: $secondary-color;
+    @extend %shadow;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.blog__button {
+  @extend %btn;
+  padding: 15px 40px;
+  @include btn(1px, solid, $blog-btn-color, $blog-btn-color, $secondary-color);
+  &__button:hover,
+  &__button:focus {
+    @extend %active;
+    @include outline(2px, solid, $blog-btn-color);
+    box-shadow: 0 0 0 4px $blog-btn-color;
+  }
+}
+
+.card-shadow {
+  position: absolute;
+  @include flex(flex, column, wrap, false, flex-end);
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(29, 29, 29, 0),
+    rgba(29, 29, 29, 1)
+  );
+  color: $secondary-color;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__date {
+    position: absolute;
+    top: 30px;
+    width: 60px;
+    height: 60px;
+    @include flex(flex, false, false, center, center);
+    border-radius: 5px;
+    background-color: $subscribe-label-color;
+    @include font(21px, $secondary-color, 700, 1.47, center);
+    text-transform: uppercase;
+  }
+}

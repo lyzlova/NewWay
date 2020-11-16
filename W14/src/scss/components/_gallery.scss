@@ -1,0 +1,69 @@
+.gallery--bcg {
+  background-color: $gallery-bcg-color;
+}
+
+.gallery {
+  padding: 100px 0 120px;
+  @include flex(flex, column, false, center, false);
+
+  &__title {
+    margin-bottom: 26px;
+    @include font(90px, $main-text-color, 700, false, center);
+  }
+
+  &__text {
+    max-width: 580px;
+    margin-bottom: 40px;
+    @include font(17px, $main-text-color, 300, 1.6, center);
+  }
+
+  &__list {
+    min-width: 320px;
+    width: 1170px;
+    margin-bottom: 48px;
+    @include flex(flex, false, wrap, false, false);
+    @extend %list;
+  }
+
+  &__img:hover {
+    @extend %shadow;
+  }
+
+  &__item:nth-child(1) {
+    flex-basis: 65.8119%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__item:nth-child(3),
+  &__item:nth-child(4) {
+    flex-basis: 48.7%;
+    height: 400px;
+  }
+
+  &__item:nth-child(3) {
+    margin-right: 30px;
+  }
+
+  &__button {
+    padding: 15px 40px;
+    @extend %btn;
+    @include btn(
+      1px,
+      solid,
+      $box-gallery-btn-color,
+      $box-gallery-btn-color,
+      $secondary-color
+    );
+  }
+
+  &__button:hover,
+  &__button:focus {
+    @extend %active;
+    @include outline(2px, solid, $box-gallery-btn-color);
+  }
+
+  &-group > &__img:first-child {
+    margin-bottom: 30px;
+  }
+}

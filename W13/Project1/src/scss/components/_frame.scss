@@ -1,0 +1,49 @@
+.frame {
+  padding: 70px 15px 30px;
+  border-width: 2px;
+  border-style: solid;
+  position: relative;
+  border-top: none;
+  @media screen and (min-width: 1024px) {
+    padding: 70px 180px 26px;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 14%;
+    top: 0;
+
+    @media screen and (min-width: 768px) {
+      width: 28%;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 34%;
+    }
+  }
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}
+
+.frame-white {
+  border-color: $main-text-color;
+  &:before,
+  &:after {
+    background-color: $main-text-color;
+  }
+}
+
+.frame-black {
+  border-color: $secondary-color;
+  &:before,
+  &:after {
+    background-color: $secondary-color;
+  }
+}

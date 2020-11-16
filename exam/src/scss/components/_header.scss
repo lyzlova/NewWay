@@ -59,7 +59,7 @@
 
 .search-form {
   @include flex(flex, row, nowrap, false, center);
-  height: 60px;
+  height: 63px;
   border: 2px solid $main-text-color;
 
   @media screen and (min-width: 768px) {

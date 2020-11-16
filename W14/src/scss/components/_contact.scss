@@ -1,0 +1,108 @@
+.contact--bcg {
+  background-image: url(../img/footer-bcg.jpg);
+  @include background(no-repeat, center, cover);
+}
+
+.contact {
+  padding: 100px 0 120px;
+
+  &__title {
+    margin-bottom: 46px;
+    @include font(90px, $main-text-color, 700, false, center);
+  }
+
+  &__text {
+    max-width: 350px;
+    margin: 0 auto;
+    margin-bottom: 46px;
+    @include font(17px, $main-text-color, 300, 1.47, center);
+  }
+}
+
+.contact-group {
+  display: flex;
+}
+
+.form-contact {
+  width: 500px;
+  margin-right: 170px;
+  @include flex(flex, column, false, start, space-between);
+
+  &__field {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 24px;
+    border: 1px solid $contact-input-color;
+    background-color: $contact-input-color;
+  }
+
+  &__label {
+    position: absolute;
+    padding: 6px;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    @include font(15px, $secondary-color, 300, 1.667, center);
+  }
+
+  &__input:active,
+  &__input:focus {
+    border-left: 6px solid $input-active-color;
+    outline: none;
+    background-color: $input-contact-bcg-color;
+  }
+}
+
+.form-contact__input:focus + .form-contact__label,
+.form-contact__input:not(:placeholder-shown) + .form-contact__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  padding: 24px;
+  border: 1px solid $contact-input-color;
+  background-color: $contact-input-color;
+}
+
+textarea::placeholder {
+  font-family: "Raleway";
+  @include font(15px, $secondary-color, 300, 1.667, left);
+}
+
+textarea:active,
+textarea:focus {
+  border-left: 6px solid $input-active-color;
+  outline: none;
+  background-color: $input-contact-bcg-color;
+}
+
+.contact-address {
+  &__address,
+  &__email,
+  &__phone {
+    @include font(17px, $main-text-color, 700, 1.471, left);
+  }
+
+  &__link {
+    color: $main-text-color;
+    text-decoration: none;
+  }
+
+  & > div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

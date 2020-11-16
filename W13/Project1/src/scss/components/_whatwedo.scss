@@ -1,0 +1,23 @@
+.what-we-do {
+  position: relative;
+  padding: 40px 15px;
+  color: $secondary-color;
+  @media screen and (min-width: 1024px) {
+    padding: 118px 15px 118px;
+  }
+
+  .scope {
+    &__list {
+      @extend %list;
+    }
+
+    &__item {
+      @include flex(flex, column, false, center, center);
+      margin-bottom: 100px;
+    }
+
+    &__img {
+      margin-bottom: 34px;
+    }
+  }
+}

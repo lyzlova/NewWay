@@ -1,0 +1,73 @@
+.subscribe--bcg {
+  background-color: $secondary-color;
+}
+
+.subscribe {
+  padding: 140px 0 166px;
+  background-image: url(../img/subscribe-bg.jpg);
+  align-items: start;
+  @include background(no-repeat, right, false);
+
+  &__title {
+    margin-bottom: 30px;
+    @include font(40px, $main-text-color, 700, false, false);
+  }
+
+  &__text {
+    max-width: 580px;
+    margin-bottom: 34px;
+    @include font(17px, $main-text-color, 300, 1.6, false);
+  }
+
+  &__button {
+    padding: 20px 40px;
+    @extend %btn;
+    @include btn(
+      1px,
+      solid,
+      $subscribe-btn-color,
+      $subscribe-btn-color,
+      $secondary-color
+    );
+  }
+
+  &__button:hover,
+  &__button:focus {
+    @extend %active;
+    @include outline(2px, solid, $subscribe-btn-color);
+    box-shadow: 0 0 0 4px $subscribe-btn-color;
+  }
+}
+
+.subscribe-form {
+  @include flex(flex, false, false, center, false);
+  width: 770px;
+}
+
+.subscribe-form-field {
+  position: relative;
+  margin-right: 30px;
+
+  &__input {
+    width: 570px;
+    padding: 24px;
+    border: 1px solid $subscribe-label-color;
+  }
+
+  &__label {
+    position: absolute; 
+    top: 50%;
+    left: 20px;
+    padding: 8px;
+    transform: translateY(-50%);
+    background-color: $secondary-color;
+    transition: transform 250ms linear;
+    @include font(15px, $subscribe-label-color, 700, 1.8, false);
+  }
+}
+
+.subscribe-form-field__input:focus + .subscribe-form-field__label,
+.subscribe-form-field__input:not(:placeholder-shown)
+  + .subscribe-form-field__label {
+  transform: translateY(-50px);
+}

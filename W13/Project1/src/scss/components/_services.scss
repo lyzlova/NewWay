@@ -1,0 +1,21 @@
+.services--bcg {
+  @include background(no-repeat, right, cover);
+  background-image: url(../img/services.jpg);
+}
+
+.services {
+  position: relative;
+  padding: 40px 15px;
+  color: $secondary-color;
+  @media screen and (min-width: 1024px) {
+    padding: 280px 15px 400px;
+  }
+
+  &__title {
+    @include font(34px, $secondary-color, 700, false, false);
+  }
+
+  &__text {
+    @include font(16px, $secondary-color, 400, 1.93, false);
+  }
+}

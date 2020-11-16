@@ -1,0 +1,73 @@
+.box-fresh {
+  padding: 25px 15px 360px;
+  @include background(no-repeat, top, cover);
+  background-image: url(../img/img2.png);
+
+  &--bcg {
+    background-color: $box-fresh-bcg;
+  }
+
+  &__content {
+    max-width: 378px;
+  }
+
+  &__title {
+    margin-bottom: 36px;
+    @include font(60px, $main-text-color, 900, false, false);
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    @include font(17px, $main-text-color, 300, 1.6, false);
+  }
+
+  &__button {
+    padding: 15px 40px;
+    @extend %btn;
+    @include btn(
+      1px,
+      solid,
+      $boxFresh-btn-color,
+      $boxFresh-btn-color,
+      $secondary-color
+    );
+  
+    &:hover,
+    &:focus {
+      @extend %active;
+      @include outline(2px, solid, $boxFresh-btn-color);
+      box-shadow: 0 0 0 4px $boxFresh-btn-color;
+    }
+  }
+}
+
+.site-nav {
+  @include flex(flex, false, false, center, space-between);
+  padding: 25px 0;
+  margin-bottom: 235px;
+
+  &__list {
+    @include flex(flex, false, false, center, false);
+    @extend %list;
+  }
+
+  &__item {
+    text-transform: uppercase;
+    border-top: 3px solid $border-menu-color;
+  }
+
+  &__item:hover {
+    border-top: 3px solid $boxFresh-btn-color;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 40px;
+  }
+
+  &__link {
+    padding: 16px 0;
+    text-decoration: none;
+    @include font(16px, $main-text-color, 700, 1.56, false);
+  }
+}
+
