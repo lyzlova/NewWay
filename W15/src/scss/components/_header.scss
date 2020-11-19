@@ -1,0 +1,62 @@
+.box-fresh {
+  padding: 0px 15px 150px;
+  @include flex(flex, column, false, false, center);
+  @include background(no-repeat, top, cover);
+  background-image: url("../img/header-bcg-img.png");
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url("../img/header-bcg-img@2x.png");
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url("../img/header-bcg-img@3x.png");
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 25px 15px 360px;
+  }
+  
+  &--bcg {
+    background-color: $box-fresh-bcg;
+  }
+
+  &__content {
+    max-width: 378px;
+  }
+
+  &__title {
+    margin-bottom: 36px;
+    @include font(60px, $main-text-color, 900, false, false);
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    @include font(17px, $main-text-color, 300, 1.6, false);
+  }
+
+  &__button {
+    padding: 15px 40px;
+    @extend %btn;
+    @include btn(
+      1px,
+      solid,
+      $boxFresh-btn-color,
+      $boxFresh-btn-color,
+      $secondary-color
+    );
+  
+    &:hover,
+    &:focus {
+      @extend %active;
+      @include outline(2px, solid, $boxFresh-btn-color);
+      box-shadow: 0 0 0 4px $boxFresh-btn-color;
+    }
+  }
+}
+
+
+

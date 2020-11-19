@@ -1,0 +1,59 @@
+.box-about--bcg {
+  background-color: $box-about-bcg-color;
+}
+
+.box-about {
+  padding: 40px 15px 300px;
+  background-image: url("../img/about-bcg-img.png");
+  @include background(no-repeat, bottom, false);
+  background-size: 300px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url("../img/about-bcg-img@2x.png");
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url("../img/about-bcg-img@3x.png");
+  }
+
+  @media screen and (min-width: 768px) {
+    @include background(no-repeat, left, false);
+    padding: 180px 15px 230px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-size: 50%;
+  }
+
+  &__content {
+    @include flex(flex, column, false, false, center);
+
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+      max-width: 400px;
+    }
+    @media screen and (min-width: 1024px) {
+      margin-left: auto;
+      max-width: 500px;
+    }
+  }
+  &__title {
+    @include font(44px, $secondary-color, 700, false, center);
+    @media screen and (min-width: 768px) {
+      @include font(90px, $secondary-color, 700, false, false);
+    }
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    @include font(17px, $secondary-color, 300, 1.6, false);
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,76 @@
+.services--bcg {
+  background-color: $box-services-bcg-color;
+}
+
+.services {
+  padding: 40px 15px 50px;
+  @include flex(flex, column, false, center, space-between);
+  background-image: url("../img/services-bcg-img.png");
+  @include background(no-repeat, center, false);
+  background-size: 50%;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url("../img/services-bcg-img@2x.png");
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url("../img/services-bcg-img@3x.png");
+  }
+
+  @media screen and (min-width: 768px) {
+    @include flex(flex, row, false, center, space-between);
+    padding: 176px 15px 148px;
+    @include background(no-repeat, right, false);
+    background-size: 40%;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    @include font(44px, $secondary-color, 700, false, center);
+    @media screen and (min-width: 768px) {
+      @include font(60px, $secondary-color, 700, false, false);
+      order: 1;
+    }
+    @media screen and (min-width: 1024px) {
+      @include font(90px, $secondary-color, 700, false, false);
+    }
+  }
+}
+
+.services-group {
+  width: 400px;
+  &__list {
+    @extend %list;
+  }
+
+  &__item {
+    @include flex(flex, row, wrap, center, space-between);
+    background-color: $secondary-color;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__caption {
+    padding: 0 26px;
+  }
+
+  &__link {
+    padding: 16px;
+    border-left: 1px solid rgb(157, 157, 157);
+    @include font(20px, $main-text-color, 300, 1.35, false);
+    @media screen and (min-width: 768px) {
+      padding: 26px;
+    }
+  }
+
+  &__img {
+    width: 47px;
+    height: 47px;
+  }
+}

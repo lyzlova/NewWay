@@ -1,0 +1,104 @@
+.site-nav {
+  position: relative;
+  padding: 25px 0;
+  margin-bottom: 235px;
+  margin-bottom: 100px;
+  @include flex(flex, row, nowrap, center, space-between);
+
+  @media screen and (min-width: 1140px) {
+    margin-bottom: 0;
+  }
+
+  &__list {
+    @extend %list;
+
+    @media screen and (min-width: 768px) {
+      @include flex(flex, row, nowrap, center, space-between);
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    text-transform: uppercase;
+    border-top: 3px solid $border-menu-color;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    &:hover {
+      border-top: 3px solid $boxFresh-btn-color;
+    }
+    @media screen and (min-width: 1140px) {
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__link {
+    padding: 16px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include font(16px, $main-text-color, 700, 1.56, center);
+  }
+
+  &__label {
+    @media screen and (min-width: 769px) {
+      display: none;
+    }
+
+      &__toggle-btn {
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+
+  }
+
+  #navmenu {
+    display: none;
+  }
+}
+
+.site-nav {
+  &__toggle-btn {
+    display: none;
+    padding: 1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-nav {
+    &__menu:checked ~ &__list {
+      display: flex;
+      flex-flow: column nowrap;
+      padding: 30px;
+      position: absolute;
+      top: 100%;
+      background-color: $boxFresh-btn-color;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .site-nav {
+    position: initial;
+    &__menu:checked ~ &__list {
+      position: absolute;
+      display: flex;
+      top: 57%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+    }
+  }
+}

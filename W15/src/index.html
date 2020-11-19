@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="box-fresh--bcg">
+      <div class="box-fresh container">
+        <nav class="site-nav">
+          <a class="logo site-nav__logo" href="">
+            <img src="./img/logo.png" alt="" />
+          </a>
+          <input id="navmenu" class="site-nav__menu" type="checkbox" />
+          <label for="navmenu" class="site-nav__label">
+            <span class="nav-menu__toggle-btn">
+              <svg
+                class="icon-cross"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="39"
+                height="32"
+                viewBox="0 0 39 32"
+              >
+                <path
+                  d="M0 0v4.571h38.857v-4.571h-38.857zM0 18.286h38.857v-4.571h-38.857v4.571zM0 32h38.857v-4.571h-38.857v4.571z"
+                ></path>
+              </svg>
+            </span>
+          </label>
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">Home</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">About</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">Services</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">Gallery</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">Blog</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="box-fresh__content">
+          <h1 class="box-fresh__title">Fresh Life</h1>
+          <p class="box-fresh__text">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          </p>
+          <button class="box-fresh__button">Get free now</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="box-about--bcg">
+        <div class="container box-about">
+          <div class="box-about__content">
+            <h2 class="box-about__title">About Us</h2>
+            <p class="box-about__text">
+              Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut alliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum.
+            </p>
+            <p class="box-about__text">
+              Nim id est laborum. Sed ut perspiciatis unde omnis iste natus
+              error sit voluptatem accusantium doloremque laudantium, totam rem
+              aperiam, eaque ipsa quae ab illo inventore.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="services--bcg">
+        <div class="container services">
+          <h2 class="services__title">Our Services</h2>
+          <div class="services-group">
+            <ul class="services-group__list">
+              <li class="services-group__item">
+                <p class="services-group__caption">Online Shopping</p>
+                <a class="services-group__link" href="#">
+                  <img
+                    class="services-group__img"
+                    src="./img/icon1.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li class="services-group__item">
+                <p class="services-group__caption">Quality Product</p>
+                <a class="services-group__link" href="#">
+                  <img
+                    class="services-group__img"
+                    src="./img/icon2.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li class="services-group__item">
+                <p class="services-group__caption">
+                  Domestic & International <br />
+                  Delivery
+                </p>
+                <a class="services-group__link" href="#">
+                  <img
+                    class="services-group__img"
+                    src="./img/icon3.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li class="services-group__item">
+                <p class="services-group__caption">Well Organized</p>
+                <a class="services-group__link" href="#">
+                  <img
+                    class="services-group__img"
+                    src="./img/icon4.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="gallery--bcg">
+        <div class="container gallery">
+          <h2 class="gallery__title">Gallery</h2>
+          <p class="gallery__text">
+            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+          </p>
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <!-- <img
+                class="gallery__img"
+                src="./img/gall-img5.jpg"
+                alt="orange fruit"
+              /> -->
+              <img
+              class="gallery__img"
+              srcset="./img/gall-img5.jpg 1x, ./img/gall-img5@2x.jpg 2x"
+              src="./img/gall-img5.jpg"
+              alt="orange fruit"
+            />
+            </li>
+            <!-- <li class="gallery__item">
+              <div class="gallery-group">
+                <img
+                  class="gallery__img"
+                  src="./img/gall-img2.png"
+                  alt=""
+                />
+                <img
+                  class="gallery__img"
+                  src="./img/gall-img3.png"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li class="gallery__item">
+              <img class="gallery__img" src="./img/gall-img5.jpg" alt="" />
+            </li>
+            <li class="gallery__item">
+              <img class="gallery__img" src="./img/gall-img5.jpg" alt="" />
+            </li> -->
+          </ul>
+          <button class="gallery__button">VIEW MORE</button>
+        </div>
+      </section>
+      <!-- <section class="subscribe--bcg">
+        <div class="container subscribe">
+          <h2 class="subscribe__title">Subscribe To Us</h2>
+          <p class="subscribe__text">
+            Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam.
+          </p>
+          <form class="subscribe-form" action="#" autocomplete="off">
+            <div class="subscribe-form-field">
+              <input
+                class="subscribe-form-field__input"
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="  "
+              />
+              <label class="subscribe-form-field__label" for="mail"
+                >Your email address...</label
+              >
+            </div>
+            <button class="subscribe__button">SUBSCRIBE</button>
+          </form>
+        </div>
+      </section> -->
+      <!-- <section class="blog--bcg">
+        <div class="container blog">
+          <h1 class="blog__title">Blog</h1>
+          <p class="blog__text">
+            Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi alliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit.
+          </p>
+          <ul class="blog__list">
+            <li class="blog__item">
+              <img src="./img/img1.jpg" alt="Cup bronze" />
+              <div class="blog__icon card-shadow">
+                <h2 class="card-shadow__title">
+                  Pesticides & Food: What You Need to Know
+                </h2>
+                <p class="card-shadow__text">By Auskteez - 6 hours ago</p>
+                <span class="card-shadow__date">10 <br />nov</span>
+              </div>
+            </li>
+            <li class="blog__item">
+              <img src="./img/img2.jpg" alt="" />
+              <div class="blog__icon card-shadow">
+                <h2 class="card-shadow__title">
+                  Pesticides & Food: What You Need to Know
+                </h2>
+                <p class="card-shadow__text">By Auskteez - 6 hours ago</p>
+                <span class="card-shadow__date">14 <br />nov</span>
+              </div>
+            </li>
+            <li class="blog__item">
+              <img src="./img/img3.jpg" alt="" />
+              <div class="blog__icon card-shadow">
+                <h2 class="card-shadow__title">
+                  Pesticides & Food: What You Need to Know
+                </h2>
+                <p class="card-shadow__text">By Auskteez - 6 hours ago</p>
+                <span class="card-shadow__date">20 <br />nov</span>
+              </div>
+            </li>
+          </ul>
+          <button class="blog__button">VIEW MORE</button>
+        </div>
+      </section> -->
+      <!-- <section class="contact--bcg">
+        <div class="box container contact">
+          <h1 class="contact__title">Contact</h1>
+          <p class="contact__text">
+            For new projects, ideas, business or anything you'd like to discuss,
+            contact with me!
+          </p>
+          <div class="contact-group">
+            <form class="form-contact" action="#">
+              <label class="form-contact__field">
+                <input
+                  class="form-contact__input"
+                  type="text"
+                  name="text"
+                  placeholder="  "
+                />
+                <span class="form-contact__label">Name</span>
+              </label>
+              <label class="form-contact__field">
+                <input
+                  class="form-contact__input"
+                  type="email"
+                  name="mail"
+                  placeholder="  "
+                />
+                <span class="form-contact__label">Your email...</span>
+              </label>
+              <label class="form-contact__field">
+                <input
+                  class="form-contact__input"
+                  type="tel"
+                  name="tel"
+                  placeholder="  "
+                />
+                <span class="form-contact__label">Your phone number...</span>
+              </label>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Your messge..."
+              ></textarea>
+            </form>
+            <div class="contact-address">
+              <div>
+                <span class="contact-address__address">ADDRESS</span><br />
+                <p>123 City name, Street, City, Country</p>
+              </div>
+              <div>
+                <span class="contact-address__email">EMAIL</span><br />
+                <a class="contact-address__link" href="mailto:cahee@domain"
+                  >cahee@domain</a
+                >
+              </div>
+              <div>
+                <span class="contact-address__phone">PHONE</span><br />
+                <a class="contact-address__link" href="tel:+012 345 6789"
+                  >+012 345 6789</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- <footer class="footer--bcg">
+        <div class="container footer">
+          <a class="logo footer__logo" href="">
+            <img src="./img/logo-small.png" alt="" />
+          </a>
+          <small class="footer__small">
+            &#169; 2015 Company. All right reserved.</small
+          >
+          <p class="footer__text">
+            Made with <span class="accent">love</span> by Auskteez
+          </p>
+        </div>
+      </footer>  -->
+    </main>
+  </body>
+</html>

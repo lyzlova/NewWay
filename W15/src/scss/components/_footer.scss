@@ -1,0 +1,27 @@
+.footer--bcg {
+  background-color: $main-text-color;
+}
+
+.footer {
+  padding: 40px 0 30px;
+  @include flex(flex, row, false, center, space-between);
+
+  &__logo {
+    width: 127px;
+    height: 52px;
+    order: 0;
+  }
+
+  &__small {
+    order: -1;
+    @include font(16px, $footer-text-color, 700, 1.563, false);
+  }
+
+  &__text {
+    @include font(15px, $footer-text-color, 700, 1.667, false);
+  }
+}
+
+.accent {
+  color: $footer-accent;
+}
