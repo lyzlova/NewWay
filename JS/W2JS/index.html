@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>Введите ваш возраст</p>
+    <input type="text" name="input1" id="input1" />
+    <button onclick="getInfo1();">Check</button>
+    <h2 id="getInfo1">&nbsp;</h2>
+
+    <p>Введите число от 0 до 9</p>
+    <input type="text" name="input2" id="input2" />
+    <button onclick="getInfo2();">Check</button>
+    <h2 id="getInfo2">&nbsp;</h2>
+
+    <p>Введите трехзначное число</p>
+    <input type="text" name="input3" id="input3" />
+    <button onclick="getInfo3();">Check</button>
+    <h2 id="getInfo3">&nbsp;</h2>
+
+    <p>Введите год для проверки, високосный он или нет</p>
+    <input type="text" name="input4" id="input4" />
+    <button onclick="getInfo4();">Check</button>
+    <h2 id="getInfo4">&nbsp;</h2>
+
+    <p>Введите пятиразрядное число, является ли оно палиндромом</p>
+    <input type="text" name="input5" id="input5" />
+    <button onclick="getInfo5();">Check</button>
+    <h2 id="getInfo5">&nbsp;</h2>
+
+    <p>Конвертер валют. Введите $</p>
+    <input type="text" name="input6" id="input6" />
+    <select id="currency" name="currency">
+      <option value="UAN" selected="selected">UAN</option>
+      <option value="EUR">EUR</option>
+      <option value="AZN">AZN</option>
+    </select>
+    <button onclick="getInfo6();">Check</button>
+    <h2 id="getInfo6">&nbsp;</h2>
+
+    <p>Введите сумму покупки для подсчета скидки</p>
+    <input type="text" name="input7" id="input7" />
+    <button onclick="getInfo7();">Check</button>
+    <h2 id="getInfo7">&nbsp;</h2>
+
+    <p>Введите длину окружности и периметр квадрата</p>
+    <input type="text" name="input8" id="input8" />
+    <input type="text" name="input9" id="input9" />
+    <button onclick="getInfo8();">Check</button>
+    <h2 id="getInfo8">&nbsp;</h2>
+
+    <h2>Блок из трех вопросов</h2>
+    <div>
+      <p>Введите сумму двух чисел 2 + 2</p>
+      <label for="quastion1">8</label>
+      <input type="radio" name="quastion1" value="8" id="quastion1" />
+      <label for="quastion2">4</label>
+      <input type="radio" name="quastion1" value="4" id="quastion2" />
+      <label for="quastion3">5</label>
+      <input type="radio" name="quastion1" value="5" id="quastion3" />
+
+      <p>Выполни деление и проверь результат 21 : 7</p>
+      <label for="quastion4">3</label>
+      <input type="radio" name="quastion2" value="3" id="quastion4" />
+      <label for="quastion5">4</label>
+      <input type="radio" name="quastion2" value="4" id="quastion5" />
+      <label for="quastion6">2</label>
+      <input type="radio" name="quastion2" value="2" id="quastion6" />
+
+      <p>Выполни умножение и проверь результат 6 * 8</p>
+      <label for="quastion7">54</label>
+      <input type="radio" name="quastion3" value="54" id="quastion7" />
+      <label for="quastion8">58</label>
+      <input type="radio" name="quastion3" value="58" id="quastion8" />
+      <label for="quastion9">48</label>
+      <input type="radio" name="quastion3" value="48" id="quastion9" />
+
+      <button type="submit" onclick="getInfo9();">Check</button>
+      <h2 id="getInfo9">&nbsp;</h2>
+    </div>
+
+    <p>Введите день, месяц, год и мы выведем следующую за ней дату</p>
+    <input type="text" name="input10" id="input10" />
+    <input type="text" name="input11" id="input11" />
+    <input type="text" name="input12" id="input12" />
+    <button onclick="getInfo10();">Check</button>
+    <h2 id="getInfo10">&nbsp;</h2>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
