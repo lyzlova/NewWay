@@ -29,8 +29,8 @@ const car = {
   },
 };
 
-// console.log(car.getDescription());
-// console.log(car.calculatTime(720));
+console.log(car.getDescription());
+console.log(car.calculatTime(720));
 
 // 2. Создать объект, хранящий в себе отдельно числитель и
 // знаменатель дроби, и следующие функции для работы с этим объектом:
@@ -170,11 +170,11 @@ const time = {
   },
 };
 
-// const newShowTime = time.showTime();
-// console.log(newShowTime);
-// const changeSecond = time.changeSecond(3089);
-// console.log(changeSecond);
-// const changeMinute = time.changeMinute(3);
-// console.log(changeMinute);
-// const changeHour = time.changeHour(3);
-// console.log(changeHour);
+const newShowTime = time.showTime();
+console.log(newShowTime);
+const changeSecond = time.changeSecond(3089);
+console.log(changeSecond);
+const changeMinute = time.changeMinute(3);
+console.log(changeMinute);
+const changeHour = time.changeHour(3);
+console.log(changeHour);
