@@ -1,0 +1,74 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.root {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+
+.edit {
+  padding: 40px;
+  background-color: rgb(131, 125, 125);
+}
+
+.show {
+  display: flex;
+}
+
+.close {
+  display: none;
+}
+
+/* table */
+
+.table {
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border: 1px solid #212121;
+}
+
+/* resize */
+.resize {
+  width: 200px;
+  border: 1px solid #212121;
+  padding: 30px;
+}
+
