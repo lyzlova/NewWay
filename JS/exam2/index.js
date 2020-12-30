@@ -25,7 +25,7 @@ todoList.innerHTML = `
     <footer class="footer">
       <div class="progress">
       <div class="completed">
-        <p> 0 of 0 tasks done</p>
+        <p class="completed__text"> 0 of 0 tasks done</p>
       </div>
       </div>
       <button class="button tasks-done">
@@ -42,7 +42,6 @@ const inputValue = document.querySelector(".input");
 // =============
 
 let todoItems = [];
-let keys = [];
 
 class Item {
   constructor(text) {
@@ -148,12 +147,10 @@ class Item {
   }
 
   deleteMultipleItems(keys) {
-    todoItems = todoItems.filter((item) => {
-      keys.filter((key) => {
-        if (item.id !== Number(key)) {
-          this.deleteInput(key);
-        } else item.id !== Number(key);
-      });
+    todoItems = todoItems.filter((todo) => {
+      if (todo.checked) {
+        this.deleteInput(todo.id);
+      }
     });
   }
 
@@ -167,17 +164,20 @@ class Item {
     this.progress(activeCheck.length);
 
     text.classList.toggle("line-through");
-
-    keys.push(key);
   }
 
   progress(length) {
-    const progress = document.querySelector(".progress");
+    const progress = document.querySelector(".completed__text");
     const completed = document.querySelector(".completed");
     const completedWidth = (length / todoItems.length) * 100;
-    // console.log(completed);
-    // completed.style.width = `${completedWidth}%`;
-    // completed.style.backgroundColor = "#f9ed48";
+
+    if (length !== 0) {
+      completed.style.backgroundColor = "#f9ed48";
+      completed.style.width = `${completedWidth}%`;
+    } else {
+      completed.style.backgroundColor = "inherit";
+      completed.style.width = "100%";
+    }
     progress.textContent = `${length} of ${todoItems.length} tasks done`;
   }
 }
@@ -187,7 +187,7 @@ const newItem = new Item();
 function check(e) {
   e.preventDefault();
 
-  if (e.target.className === "button add") {
+  if (e.target.classList.contains("add")) {
     const footer = document.querySelector(".footer");
 
     if (inputValue.value !== "") {
@@ -198,7 +198,7 @@ function check(e) {
   }
 
   if (
-    e.target.className === "btn delete-item" &&
+    e.target.classList.contains("delete-item") &&
     e.target.nodeName === "BUTTON"
   ) {
     const itemKey = e.target.parentNode.parentNode.dataset.key;
@@ -206,20 +206,20 @@ function check(e) {
   }
 
   if (
-    e.target.className === "btn change-item" &&
+    e.target.classList.contains("change-item") &&
     e.target.nodeName === "BUTTON"
   ) {
     const itemKey = e.target.parentNode.parentNode.dataset.key;
     newItem.changeInput(itemKey);
   }
 
-  if (e.target.className === "tick" && e.target.nodeName === "INPUT") {
+  if (e.target.classList.contains("tick") && e.target.nodeName === "INPUT") {
     const itemKey = e.target.parentNode.dataset.key;
     newItem.toggleDone(itemKey);
   }
 
   if (e.target.classList.contains("tasks-done")) {
-    newItem.deleteMultipleItems(keys);
+    newItem.deleteMultipleItems();
   }
 }
 

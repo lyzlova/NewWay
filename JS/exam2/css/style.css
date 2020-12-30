@@ -169,13 +169,8 @@ footer {
 }
 
 .progress {
-  width: 200px;
+  width: 260px;
   border: 1px solid #aca7a7;
   padding: 6px;
 }
-
-/* .completed {
-  background-color: #f9ed48;
-  width: 0%;
-} */
 
