@@ -9,6 +9,7 @@ const root = document.getElementById("root");
 const table = document.createElement("table");
 table.className = "table";
 
+let newData = [...data];
 
 // ---------------
 const newTable = createTable("Id", "Amount", "Account");
@@ -26,7 +27,7 @@ function createTable(id, amount, account) {
 }
 
 // -------------
-const markup = createTableRows(data);
+const markup = createTableRows(newData);
 
 function createTableRows(data) {
   console.log(data);
@@ -54,6 +55,7 @@ function sortTableRows(data, elem) {
 
 function handleSort(e) {
   let eventElement = e.target.innerHTML.toLowerCase();
+  console.log(eventElement);
   if (e.target.nodeName === "TH") {
     sortTableRows(data, eventElement);
   }

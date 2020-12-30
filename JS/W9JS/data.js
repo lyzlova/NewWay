@@ -1,4 +1,4 @@
-export default [
+const data = [
     {
       id: '3',
       amount: '179',
@@ -50,3 +50,5 @@ export default [
       account: '07081761'
     }
   ];
+
+  export default data;

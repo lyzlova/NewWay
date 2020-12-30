@@ -1,0 +1,181 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #489cc1;
+}
+
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 30px;
+}
+
+.root {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.todolist {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.todolist__title {
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 20px;
+  margin-right: 6px;
+  border: 1px solid #489cc1;
+}
+
+.button {
+  padding: 20px;
+  background-color: #489cc1;
+  border: 1px solid #489cc1;
+  color: #ffffff;
+}
+
+.value__list {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.value__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px;
+  background-color: #f0f9ff;
+  border-top: 1px solid #489cc1;
+}
+
+.value-text {
+  color: #489cc1;
+}
+
+.group-button {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  display: inline-block;
+  background-color: inherit;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.change-item {
+  margin-right: 6px;
+}
+
+.item-label {
+  display: inline-block;
+  width: 100%;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.item_input {
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+li.editMode input[type="text"] {
+  display: block;
+}
+
+ul li.editMode span {
+  display: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.tasks-done {
+  display: flex;
+  align-items: center;
+}
+
+.tasks-done span{
+  margin: 0 auto;
+}
+
+.progress {
+  width: 200px;
+  border: 1px solid #aca7a7;
+  padding: 6px;
+}
+
+/* .completed {
+  background-color: #f9ed48;
+  width: 0%;
+} */
+
