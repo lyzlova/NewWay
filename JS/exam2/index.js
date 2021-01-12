@@ -150,7 +150,7 @@ class Item {
     todoItems = todoItems.filter((todo) => {
       if (todo.checked) {
         this.deleteInput(todo.id);
-      }
+      } 
     });
   }
 

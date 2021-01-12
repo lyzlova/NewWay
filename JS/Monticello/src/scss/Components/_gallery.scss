@@ -1,0 +1,50 @@
+.gallery {
+  @include flex(flex, column, false, center, center);
+  position: relative;
+
+  @media screen and (max-width: 767px) {
+    padding: 40px 30px;
+  }
+}
+
+.images {
+  @include flex(flex, row, wrap, center, space-between);
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    @include flex(flex, row, wrap, stretch, space-between);
+  }
+
+  .img1 {
+    position: relative;
+    @include flex(flex, column, false, center, center);
+    margin-bottom: 5px;
+
+    & > div {
+      position: absolute;
+      height: 80px;
+      width: 80px;
+      background: url('../images/icon/360.png') no-repeat;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 49.8%;
+      margin-bottom: 0;
+    }
+  }
+
+  & > div {
+    @include flex(flex, row, wrap, center, space-between);
+    align-content: space-between;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 49%;
+    }
+
+    .img {
+      width: 49%;
+      height: 49%;
+    }
+  }
+}

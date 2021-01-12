@@ -1,0 +1,112 @@
+.news {
+  @include flex(flex, column, false, center, false);
+  position: relative;
+  background-image: url('../images/bcg-images/news-bcg.png'),
+    linear-gradient(
+      45deg,
+      $linear-color-news-first 0%,
+      $linear-color-news-second 100%
+    );
+  @include background(no-repeat, bottom, contain);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/bcg-images/news-bcg@2x.png'),
+      linear-gradient(
+        45deg,
+        $linear-color-news-first 0%,
+        $linear-color-news-second 100%
+      );
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url('../images/bcg-images/news-bcg@3x.png'),
+      linear-gradient(
+        45deg,
+        $linear-color-news-first 0%,
+        $linear-color-news-second 100%
+      );
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 40px 30px;
+  }
+
+  &__title {
+    color: $main-text-color;
+    &::before {
+      border-color: $main-text-color;
+    }
+  }
+
+  &__list {
+    @extend %list;
+  }
+}
+
+.new {
+  max-width: 280px;
+  @include flex(flex, column, false, stretch, center);
+  background-color: $main-text-color;
+
+  .img {
+    position: relative;
+    @include flex(flex, column, false, center, center);
+
+    .plus {
+      display: none;
+      position: absolute;
+      height: 78px;
+      width: 78px;
+      background: url('../images/icon/plus.svg') no-repeat;
+    }
+  }
+
+  & > .text {
+    padding: 10px;
+    @include flex(flex, column, false, flex-start, center);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    @include font(19px, $title-color-products, 700, 1.545, left);
+    font-family: 'gothambold1';
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    @include font(16px, $text-color-products, 400, 1.667, left);
+    margin-bottom: 36px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  &:hover .plus {
+    display: block;
+  }
+}
+
+.author {
+  @include flex(flex, row, false, center, false);
+  font-family: 'GothamBook';
+
+  &__img {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    border-radius: 100%;
+  }
+
+  &__name {
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    @include font(16px, $title-color-products, 400, 1.222, left);
+  }
+
+  .date {
+    @include font(12px, $color-author-date, 400, 1.571, left);
+  }
+}
+

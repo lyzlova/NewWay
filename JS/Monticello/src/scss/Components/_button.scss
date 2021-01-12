@@ -1,0 +1,16 @@
+.btn {
+  padding: 10px 20px 0;
+  @include btn(1px, solid, $title-color-products, inherit, $main-text-color);
+  @extend %btn;
+  @include font(14px, $text-color-products, 400, 1.571, center);
+  font-family: 'GothamBook';
+  
+  @media screen and (min-width: 768px) {
+    padding: 16px 20px 4px;
+  }
+  
+  &:hover {
+    @extend %active;
+  }
+}
+

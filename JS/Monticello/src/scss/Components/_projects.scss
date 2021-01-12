@@ -1,0 +1,112 @@
+#projects {
+  @include flex(flex, column, false, center, false);
+  @media screen and (max-width: 767px) {
+    padding: 40px 30px;
+  }
+}
+
+.projects {
+  @extend %list;
+
+  &__item {
+    @include flex(flex, column, false, center, false);
+    padding-bottom: 50px;
+
+    @media screen and (min-width: 768px) {
+      @include flex(flex, row, false, flex-start, space-between);
+
+      & > div {
+        position: relative;
+        flex-basis: 40%;
+      }
+
+      &:nth-child(even) > div:nth-child(odd) {
+        .projects__back {
+          background-color: $back-news-color-even;
+          right: -43.3%;
+        }
+        position: relative;
+        flex-basis: 56%;
+        order: 1;
+        @include flex(flex, row, false, flex-start, space-between);
+      }
+
+      &:nth-child(odd) > div:nth-child(odd) {
+        .projects__back {
+          background-color: $back-news-color-odd;
+          left: 23%;
+        }
+        flex-basis: 56%;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1140px) {
+    padding-bottom: 140px;
+
+    &__back {
+      position: absolute;
+      z-index: -1;
+      width: 67%;
+      height: 470px;
+      top: 36%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    background-color: $bcg-color-project-img;
+  }
+
+  &__title {
+    @include font(22px, $text-color-products, 400, 1.091, left);
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+
+    span {
+      display: inline-block;
+      margin-top: 4px;
+      margin-bottom: 20px;
+      @include font(32px, $title-color-products, 400, 1, left);
+      font-family: 'GothamMediumRegular';
+
+      @media screen and (min-width: 1024px) {
+        @include font(44px, $title-color-products, 400, 1, left);
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    @include font(18px, $text-color-products, 400, 1.667, left);
+    font-family: 'Open Sans', sans-serif;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 34px;
+    }
+  }
+
+  .btn {
+    margin-bottom: 34px;
+  }
+
+  .address {
+    @include flex(flex, row, false, center, false);
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    @include font(18px, $text-color-products, 400, 1.667, left);
+    &__icon {
+      margin-right: 6px;
+    }
+  }
+}
+
+.more {
+  display: none;
+}
+
+.open {
+  display: block;
+}

@@ -1,0 +1,73 @@
+.menu {
+  @include flex(flex, column, false, center, space-between);
+  flex-basis: 90%;
+  margin-bottom: 14px;
+  @extend %list;
+
+  @media screen and (min-width: 767px) {
+    @include flex(flex, row, false, center, space-evenly);
+    flex-basis: 90%;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    position: relative;
+    @media screen and (min-width: 1199px) {
+      flex-basis: 24%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+      @media screen and (min-width: 767px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-family: 'GothamBook';
+    @include font(14px, $main-text-color, 400, 1.6, left);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 10px;
+      width: 10px;
+      top: 50%;
+      left: -10%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      border: 1px solid $main-text-color;
+    }
+  }
+
+  &__link--active::before {
+    @media screen and (max-width: 767px) {
+      height: 10px;
+      width: 10px;
+      top: 50%;
+      left: -10%;
+      background-color: $main-text-color;
+    }
+
+    @media screen and (min-width: 768px) {
+      background-image: url('../images/icon/ellipse-rectangle.png');
+      height: 84px;
+      width: 17px;
+      top: -69%;
+      left: -8%;
+      border: none;
+      border-radius: 0;
+      background-repeat: no-repeat;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "./base/breakpoints";
+@import "./utils/placeholder";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/vissualy-hidden";
+@import "./base/container";
+@import "./base/fonts";
+
+@import "./base/main";
+@import "./Components/header.scss";
+@import "./Components/heading.scss";
+@import "./Components/logo.scss";
+@import "./Components/nav.scss";
+@import "./Components/menu.scss";
+@import "./Components/swiper.scss";
+@import "./Components/button.scss";
+@import "./Components/projects.scss";
+@import "./Components/text.scss";
+@import "./Components/news.scss";
+@import "./Components/gallery.scss";
+@import "./Components/arrow.scss";
+@import "./Components/footer.scss";
+@import "./Components/map.scss";
+@import "./Components/socialIcons.scss";
+@import "./Components/burger.scss";
+@import "./Components/contacts.scss";
+@import "./Components/form.scss";

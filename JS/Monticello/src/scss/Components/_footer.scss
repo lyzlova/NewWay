@@ -1,0 +1,58 @@
+.footer {
+  background-image: url('../images/bcg-images/footer-bcg.png'),
+    linear-gradient(
+      45deg,
+      $linear-color-footer-first 0%,
+      $linear-color-footer-second 100%
+    );
+  @include background(no-repeat, top, contain);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/bcg-images/footer-bcg@2x.png'),
+      linear-gradient(
+        45deg,
+        $linear-color-footer-first 0%,
+        $linear-color-footer-second 100%
+      );
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url('../images/bcg-images/footer-bcg@3x.png'),
+      linear-gradient(
+        45deg,
+        $linear-color-footer-first 0%,
+        $linear-color-footer-second 100%
+      );
+  }
+
+  & > .container {
+    @include flex(flex, row, wrap, false, space-between);
+    padding: 190px 0 160px;
+    max-width: 770px;
+
+    @media screen and (max-width: 767px) {
+      @include flex(flex, column, false, center, center);
+    }
+
+    .credit {
+      .logo {
+        margin-bottom: 40px;
+      }
+
+      p {
+        margin-bottom: 30px;
+        @include font(10px, $main-text-color, 400, 1.571, center);
+        font-family: 'GothamBook';
+
+        @media screen and (min-width: 768px) {
+          margin-bottom: 0;
+          @include font(14px, $main-text-color, 400, 1.571, center);
+        }
+      }
+    }
+  }
+}

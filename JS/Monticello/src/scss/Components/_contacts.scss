@@ -1,0 +1,71 @@
+.contacts {
+  position: relative;
+}
+
+.form {
+  width: 80%;
+  max-width: 770px;
+  position: absolute;
+  padding: 40px 20px 30px;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $main-text-color;
+  @include background(no-repeat, bottom, contain);
+  background-image: url('../images/bcg-images/form-bcg.png');
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/bcg-images/form-bcg@2x.png');
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url('../images/bcg-images/form-bcg@3x.png');
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 60px 50px 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  & > div {
+    @include flex(flex, column, false, center, center);
+    @media screen and (min-width: 768px) {
+      @include flex(flex, row, false, flex-start, space-between);
+    }
+  }
+
+  .contact {
+    list-style: none;
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      width: 60%;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      @include flex(flex, row, false, false, flex-start);
+      &:not(:last-child) {
+        margin-bottom: 10px;
+        @media screen and (min-width: 768px) {
+          margin-bottom: 44px;
+        }
+      }
+    }
+
+    p {
+      @include font(18px, $title-color-products, 400, 1.889, left);
+      font-family: 'GothamBook';
+      margin-left: 10px;
+    }
+  }
+}

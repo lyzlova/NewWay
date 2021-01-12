@@ -1,0 +1,64 @@
+.heading {
+  @include flex(flex, column, false, center, flex-end);
+  position: relative;
+  height: 800px;
+  
+  background-image: url('../images/bcg-images/heading-bcg.png'),
+    url('../images/bcg-images/lines.png'),
+    linear-gradient(
+      45deg,
+      $linear-color-header-first 0%,
+      $linear-color-header-second 100%
+    );
+  @include background(no-repeat, top, auto);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url('../images/bcg-images/heading-bcg@2x.png'),
+      url('../images/bcg-images/lines.png'),
+      linear-gradient(
+        45deg,
+        $linear-color-header-first 0%,
+        $linear-color-header-second 100%
+      );
+  }
+
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    background-image: url('../images/bcg-images/heading-bcg@3x.png'),
+      url('../images/bcg-images/lines.png'),
+      linear-gradient(
+        45deg,
+        $linear-color-header-first 0%,
+        $linear-color-header-second 100%
+      );
+    @media screen and (max-width: 1199px) {
+      background-image: linear-gradient(
+        45deg,
+        $linear-color-header-first 0%,
+        $linear-color-header-second 100%
+      );
+    }
+  }
+
+  &__title {
+      margin-bottom: 36px;
+      @include font(32px, $main-text-color, 700, 1, center);
+      letter-spacing: 6px;
+      font-family: 'gothambold1';
+      @media screen and (min-width: 767px) {
+        @include font(70px, $main-text-color, 700, 1, center);
+      }
+    }
+  
+    &__text {
+      @include font(18px, $main-text-color, 400, 1.6, center);
+      font-family: 'GothamBook';
+      letter-spacing: 4px;
+    }
+}  
+
+
+
